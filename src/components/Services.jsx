@@ -39,7 +39,7 @@ const Services = () => {
     {
       id: 'ai',
       title: 'AI + Automation Systems',
-      description: 'Integrated AI solutions for attendance management, security systems, parking automation, and intelligent data processing.',
+      description: 'Automatic Number Plate Recognition (ANPR) - AI-driven number plate detection and logging used in PetaLog and PetaParking for car washes, fuel stations, and gated facilities.',
       image: '/lovable-uploads/c811e893-2ab8-4cb3-b82b-e3d471803e73.png',
       icon: '🤖',
       features: [
