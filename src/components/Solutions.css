@@ -103,6 +103,20 @@
   padding: var(--space-6);
 }
 
+.card-title-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.solution-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .card-title {
   font-size: var(--font-size-xl);
   font-weight: 600;
@@ -216,6 +230,15 @@
   
   .card-content {
     padding: var(--space-4);
+  }
+  
+  .card-title-container {
+    gap: var(--space-3);
+  }
+  
+  .solution-logo {
+    width: 50px;
+    height: 50px;
   }
   
   .card-features {

@@ -30,8 +30,9 @@ const Solutions = () => {
       subtitle: 'Smart Attendance System',
       description: 'Biometric and RFID-based attendance tracking for institutions and offices with real-time monitoring and seamless integration.',
       image: '/lovable-uploads/37d1db48-fe33-4508-b1f0-890ce17db017.png',
+      logo: '/lovable-uploads/f0a9a1df-2155-43b9-978c-5ab5d2544416.png',
       features: ['Biometric Recognition', 'RFID Technology', 'Real-time Logs', 'Scalable Architecture'],
-      gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+      gradient: 'linear-gradient(135deg, #6b7280 0%, #4b5563 100%)'
     },
     {
       id: 'petaparking',
@@ -39,8 +40,9 @@ const Solutions = () => {
       subtitle: 'Smart Parking Manager',
       description: 'Automated parking lot management with ANPR technology, real-time space tracking, and intelligent billing systems.',
       image: '/lovable-uploads/9b771bef-2835-4e84-aa23-deee60912ed2.png',
+      logo: '/lovable-uploads/9ce02001-66c8-4e23-8042-e642d481fe41.png',
       features: ['ANPR Technology', 'Real-time Tracking', 'Revenue Analysis', 'Multi-branch Access'],
-      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+      gradient: 'linear-gradient(135deg, #6b7280 0%, #374151 100%)'
     },
     {
       id: 'petalog',
@@ -48,8 +50,9 @@ const Solutions = () => {
       subtitle: 'Vehicle Log & Management',
       description: 'Comprehensive vehicle tracking and management system for car washes, fuel pumps, and industrial facilities.',
       image: '/lovable-uploads/68c9334a-a8ab-4c68-85a8-f2571c49a70c.png',
+      logo: '/lovable-uploads/7a985817-5d2e-4406-8ea7-20c759f8c13d.png',
       features: ['Vehicle Tracking', 'Service Management', 'Multi-branch Dashboard', 'Analytics & Reports'],
-      gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
+      gradient: 'linear-gradient(135deg, #374151 0%, #1f2937 100%)'
     },
     {
       id: 'techfusion',
@@ -57,8 +60,9 @@ const Solutions = () => {
       subtitle: 'Internships & Learning',
       description: 'Hands-on training programs and internships in Web Development, PCB Design, Verilog, and emerging technologies.',
       image: '/lovable-uploads/c811e893-2ab8-4cb3-b82b-e3d471803e73.png',
+      logo: '/lovable-uploads/5b52810b-b966-43eb-9a4e-38ee92988029.png',
       features: ['Industry Certificates', 'Job-ready Skills', 'Personalized Mentorship', 'Real Project Experience'],
-      gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'
+      gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
     }
   ];
 
@@ -102,8 +106,13 @@ const Solutions = () => {
               </div>
 
               <div className="card-content">
-                <h3 className="card-title">{solution.title}</h3>
-                <p className="card-subtitle">{solution.subtitle}</p>
+                <div className="card-title-container">
+                  <img src={solution.logo} alt={`${solution.title} logo`} className="solution-logo" />
+                  <div>
+                    <h3 className="card-title">{solution.title}</h3>
+                    <p className="card-subtitle">{solution.subtitle}</p>
+                  </div>
+                </div>
                 <p className="card-description">{solution.description}</p>
 
                 <div className="card-features">

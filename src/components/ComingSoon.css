@@ -1,0 +1,195 @@
+.coming-soon {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.coming-soon-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+  min-height: 500px;
+}
+
+.coming-soon-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.petatracklogo {
+  width: 300px;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+  transition: transform var(--transition-slow);
+}
+
+.petatracklogo:hover {
+  transform: scale(1.05) rotateY(5deg);
+}
+
+.coming-soon-text {
+  flex: 1;
+  text-align: left;
+}
+
+.coming-soon-title {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  background: linear-gradient(135deg, #1f2937, #4b5563);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.coming-soon-subtitle {
+  font-size: var(--font-size-xl);
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.coming-soon-description {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+  max-width: 500px;
+}
+
+.features-preview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e5e7eb;
+  transition: all var(--transition-normal);
+}
+
+.feature-item:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-color);
+}
+
+.feature-item span {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.notify-form {
+  max-width: 400px;
+}
+
+.form-group {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.email-input {
+  flex: 1;
+  padding: var(--space-3) var(--space-4);
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  transition: all var(--transition-normal);
+  background: white;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.notify-button {
+  padding: var(--space-3) var(--space-6);
+  background: var(--gradient-tech);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+}
+
+.notify-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.success-message {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .coming-soon-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-8);
+    min-height: auto;
+    padding: var(--space-8) 0;
+  }
+
+  .petatracklogo {
+    width: 200px;
+  }
+
+  .coming-soon-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .notify-button {
+    width: 100%;
+  }
+
+  .features-preview {
+    max-width: 300px;
+    margin: 0 auto var(--space-8);
+  }
+}
+
+@media (max-width: 480px) {
+  .petatracklogo {
+    width: 150px;
+  }
+
+  .coming-soon-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .coming-soon-description {
+    font-size: var(--font-size-base);
+  }
+}
