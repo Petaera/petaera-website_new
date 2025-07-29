@@ -42,7 +42,7 @@ const About = () => {
             <div className="stats-grid">
               <div className="stat-item">
                 <div className="stat-number">5+</div>
-                <div className="stat-label">Projects Working</div>
+                <div className="stat-label">Working Projects</div>
               </div>
               <div className="stat-item">
                 <div className="stat-number">100+</div>

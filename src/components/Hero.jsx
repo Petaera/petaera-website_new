@@ -55,7 +55,7 @@ const Hero = () => {
         <div className={`hero-text ${isVisible ? 'animate-fade-up' : ''}`}>
           <h1 className="hero-title">
             <span className="hero-title-main">PetaEra Technologies</span>
-            <span className="hero-title-sub">LLP</span>
+           {/* <span className="hero-title-sub">LLP</span>*/}
           </h1>
           <p className="hero-subtitle">
             Innovating Education, Automation, and Intelligence
@@ -71,9 +71,9 @@ const Hero = () => {
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
             </button>
-            <button className="btn btn-outline" onClick={() => document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })}>
+            {/*<button className="btn btn-outline" onClick={() => document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })}>
               Get In Touch
-            </button>
+            </button>*/}
           </div>
         </div>
       </div>

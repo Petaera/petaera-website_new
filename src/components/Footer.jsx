@@ -56,7 +56,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://www.facebook.com/petaera" 
+                href="https://www.facebook.com/share/17ELzuDk44/?mibextid=wwXIfr" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
@@ -67,7 +67,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://www.linkedin.com/company/petaera" 
+                href="https://www.linkedin.com/company/petaera-technologies/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
@@ -132,7 +132,7 @@ const Footer = () => {
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
                 <a href="mailto:petaerallp@gmail.com" className="contact-link">
-                  petaerallp@gmail.com
+                  info@petaera.com
                 </a>
               </div>
               <div className="contact-item">

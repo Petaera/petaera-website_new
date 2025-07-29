@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Solutions.css';
+import { Link } from 'react-router-dom';
 
 const Solutions = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,16 +25,18 @@ const Solutions = () => {
   }, []);
 
   const solutions = [
-    {
-      id: 'petascan',
-      title: 'PetaScan / PetaTag',
-      subtitle: 'Smart Attendance System',
-      description: 'Biometric and RFID-based attendance tracking for institutions and offices with real-time monitoring and seamless integration.',
-      image: '/lovable-uploads/37d1db48-fe33-4508-b1f0-890ce17db017.png',
-      logo: '/lovable-uploads/f0a9a1df-2155-43b9-978c-5ab5d2544416.png',
-      features: ['Biometric Recognition', 'RFID Technology', 'Real-time Logs', 'Scalable Architecture'],
-      gradient: 'linear-gradient(135deg, #6b7280 0%, #4b5563 100%)'
-    },
+      /*
+  {
+    id: 'petascan',
+    title: 'PetaScan / PetaTag',
+    subtitle: 'Smart Attendance System',
+    description: 'Biometric and RFID-based attendance tracking for institutions and offices with real-time monitoring and seamless integration.',
+    image: '/lovable-uploads/37d1db48-fe33-4508-b1f0-890ce17db017.png',
+    logo: '/lovable-uploads/f0a9a1df-2155-43b9-978c-5ab5d2544416.png',
+    features: ['Biometric Recognition', 'RFID Technology', 'Real-time Logs', 'Scalable Architecture'],
+    gradient: 'linear-gradient(135deg, #6b7280 0%, #4b5563 100%)'
+  },
+  */
     {
       id: 'petaparking',
       title: 'PetaParking',
@@ -42,7 +45,8 @@ const Solutions = () => {
       image: '/lovable-uploads/9b771bef-2835-4e84-aa23-deee60912ed2.png',
       logo: '/lovable-uploads/9ce02001-66c8-4e23-8042-e642d481fe41.png',
       features: ['ANPR Technology', 'Real-time Tracking', 'Revenue Analysis', 'Multi-branch Access'],
-      gradient: 'linear-gradient(135deg, #6b7280 0%, #374151 100%)'
+      gradient: 'linear-gradient(135deg, #6b7280 0%, #374151 100%)',
+      link: 'https://peta-parking-hub-landing.lovable.app/' // 👈 Added link
     },
     {
       id: 'petalog',
@@ -52,17 +56,19 @@ const Solutions = () => {
       image: '/lovable-uploads/68c9334a-a8ab-4c68-85a8-f2571c49a70c.png',
       logo: '/lovable-uploads/7a985817-5d2e-4406-8ea7-20c759f8c13d.png',
       features: ['Vehicle Tracking', 'Service Management', 'Multi-branch Dashboard', 'Analytics & Reports'],
-      gradient: 'linear-gradient(135deg, #374151 0%, #1f2937 100%)'
+      gradient: 'linear-gradient(135deg, #374151 0%, #1f2937 100%)',
+      link: 'https://log.petaera.com'
     },
     {
       id: 'techfusion',
       title: 'Tech Fusion',
       subtitle: 'Internships & Learning',
-      description: 'Hands-on training programs and internships in Web Development, PCB Design, Verilog, and emerging technologies.',
+      description: 'Hands-on training programs and internships in Web Development, PCB Design, Verilog etc.',
       image: '/lovable-uploads/c811e893-2ab8-4cb3-b82b-e3d471803e73.png',
       logo: '/lovable-uploads/5b52810b-b966-43eb-9a4e-38ee92988029.png',
       features: ['Industry Certificates', 'Job-ready Skills', 'Personalized Mentorship', 'Real Project Experience'],
-      gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
+      gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+      link: 'https://techfusionedu.in'
     }
   ];
 
@@ -126,12 +132,12 @@ const Solutions = () => {
                   ))}
                 </div>
 
-                <button className="card-button">
-                  Learn More
-                  <svg className="button-icon" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
+                <Link to={solution.link} className="card-button">
+  Learn More
+  <svg className="button-icon" viewBox="0 0 20 20" fill="currentColor">
+    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+  </svg>
+</Link>
               </div>
 
               <div 
