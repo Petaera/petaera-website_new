@@ -62,7 +62,7 @@ const Services = () => {
         'Career Placement'
       ]
     },
-    {/*{
+    /*{
       id: 'consulting',
       title: 'Tech Consulting & Solutions',
       description: 'Enterprise-grade custom development solutions across industries, from concept to deployment with ongoing support.',
@@ -74,7 +74,7 @@ const Services = () => {
         'System Integration',
         'Technical Support'
       ]
-    }*/}
+    }*/
   ];
 
   const whyChooseUs = [
