@@ -46,7 +46,7 @@ const Solutions = () => {
       logo: '/lovable-uploads/9ce02001-66c8-4e23-8042-e642d481fe41.png',
       features: ['ANPR Technology', 'Real-time Tracking', 'Revenue Analysis', 'Multi-branch Access'],
       gradient: 'linear-gradient(135deg, #6b7280 0%, #374151 100%)',
-      link: 'https://peta-parking-hub-landing.lovable.app/' // 👈 Added link
+      link: 'https://petaparking.petaera.com' // 👈 Added link
     },
     {
       id: 'petalog',
