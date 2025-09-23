@@ -214,14 +214,85 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 360px) {
   .solutions-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-6);
+    gap: var(--space-4);
   }
   
   .solution-card {
-    margin: 0 var(--space-2);
+    margin: 0;
+    border-radius: var(--radius-xl);
+  }
+  
+  .card-header {
+    height: 180px;
+  }
+  
+  .card-content {
+    padding: var(--space-3);
+  }
+  
+  .card-title-container {
+    gap: var(--space-2);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .solution-logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .card-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-1);
+  }
+  
+  .card-subtitle {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-3);
+  }
+  
+  .card-description {
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+    margin-bottom: var(--space-4);
+  }
+  
+  .card-features {
+    gap: var(--space-1);
+    justify-content: center;
+  }
+  
+  .feature-tag {
+    font-size: var(--font-size-xs);
+    padding: var(--space-1) var(--space-2);
+  }
+  
+  .card-button {
+    padding: var(--space-3);
+    font-size: var(--font-size-sm);
+  }
+  
+  .overlay-content h4 {
+    font-size: var(--font-size-base);
+  }
+  
+  .overlay-content p {
+    font-size: var(--font-size-xs);
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .solution-card {
+    margin: 0;
   }
   
   .card-header {
@@ -237,8 +308,8 @@
   }
   
   .solution-logo {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
   
   .card-features {
@@ -249,17 +320,6 @@
     font-size: var(--font-size-xs);
     padding: var(--space-1) var(--space-2);
   }
-}
-
-@media (max-width: 480px) {
-  .solutions-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
-  }
-  
-  .solution-card {
-    margin: 0;
-  }
   
   .overlay-content h4 {
     font-size: var(--font-size-lg);
@@ -267,5 +327,63 @@
   
   .overlay-content p {
     font-size: var(--font-size-sm);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .solution-card {
+    margin: 0 var(--space-2);
+    max-width: 500px;
+    justify-self: center;
+  }
+  
+  .card-header {
+    height: 220px;
+  }
+  
+  .card-content {
+    padding: var(--space-5);
+  }
+  
+  .card-title-container {
+    gap: var(--space-3);
+  }
+  
+  .solution-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .card-features {
+    gap: var(--space-2);
+    justify-content: center;
+  }
+  
+  .feature-tag {
+    font-size: var(--font-size-sm);
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+  
+  .card-header {
+    height: 240px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .solutions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-6);
   }
 }

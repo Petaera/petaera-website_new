@@ -210,7 +210,118 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 360px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    text-align: center;
+  }
+
+  .about-description {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-4);
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .stat-item {
+    padding: var(--space-3);
+  }
+
+  .stat-number {
+    font-size: var(--font-size-2xl);
+  }
+
+  .stat-label {
+    font-size: var(--font-size-xs);
+  }
+
+  .about-image {
+    height: 250px;
+  }
+
+  .tech-icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+  }
+
+  .tech-icon {
+    padding: var(--space-2);
+    font-size: var(--font-size-xs);
+  }
+
+  .vision-mission {
+    padding: var(--space-4);
+    margin: 0 var(--space-2);
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .tab {
+    text-align: center;
+    padding: var(--space-3);
+    font-size: var(--font-size-sm);
+  }
+
+  .tab-panel h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .tab-panel p {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    text-align: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .about-image {
+    height: 280px;
+  }
+
+  .tech-icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+  }
+
+  .tech-icon {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-xs);
+  }
+
+  .vision-mission {
+    padding: var(--space-5);
+    margin: 0 var(--space-2);
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .tab {
+    text-align: center;
+    padding: var(--space-3) var(--space-4);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
   .about-content {
     grid-template-columns: 1fr;
     gap: var(--space-8);
@@ -218,7 +329,7 @@
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-4);
   }
 
@@ -241,11 +352,22 @@
   }
 
   .tabs {
-    flex-direction: column;
+    flex-direction: row;
     gap: 0;
   }
 
   .tab {
-    text-align: left;
+    text-align: center;
+    flex: 1;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-content {
+    gap: var(--space-12);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

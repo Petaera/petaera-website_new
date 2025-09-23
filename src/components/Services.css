@@ -212,10 +212,92 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 360px) {
   .services-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-6);
+    gap: var(--space-4);
+  }
+
+  .service-card {
+    margin: 0;
+  }
+
+  .service-image-container {
+    height: 140px;
+  }
+
+  .service-icon {
+    width: 35px;
+    height: 35px;
+    font-size: var(--font-size-base);
+    top: var(--space-2);
+    right: var(--space-2);
+  }
+
+  .service-content {
+    padding: var(--space-3);
+  }
+
+  .service-title {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-2);
+  }
+
+  .service-description {
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+    margin-bottom: var(--space-3);
+  }
+
+  .service-feature {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--space-1);
+  }
+
+  .feature-check {
+    width: 12px;
+    height: 12px;
+  }
+
+  .why-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-6);
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .why-card {
+    padding: var(--space-3);
+    margin: 0;
+  }
+
+  .why-icon {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-2);
+  }
+
+  .why-card-title {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-2);
+  }
+
+  .why-card-description {
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .service-card {
+    margin: 0;
   }
 
   .service-image-container {
@@ -236,6 +318,10 @@
     font-size: var(--font-size-lg);
   }
 
+  .service-description {
+    font-size: var(--font-size-base);
+  }
+
   .why-grid {
     grid-template-columns: 1fr;
     gap: var(--space-4);
@@ -243,6 +329,7 @@
 
   .why-card {
     padding: var(--space-4);
+    margin: 0;
   }
 
   .why-title {
@@ -254,12 +341,73 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 481px) and (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
   .service-card {
-    margin: 0 var(--space-2);
+    max-width: 500px;
+    justify-self: center;
+  }
+
+  .service-image-container {
+    height: 180px;
+  }
+
+  .service-icon {
+    width: 45px;
+    height: 45px;
+    font-size: var(--font-size-xl);
+  }
+
+  .service-content {
+    padding: var(--space-5);
+  }
+
+  .service-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
   }
 
   .why-card {
-    margin: 0 var(--space-2);
+    padding: var(--space-5);
+  }
+
+  .why-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .why-icon {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
   }
 }
