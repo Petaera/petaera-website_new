@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Solutions.css';
-import { Link } from 'react-router-dom';
 
 const Solutions = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,13 +7,21 @@ const Solutions = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    // Check if mobile device
+    const isMobile = window.innerWidth <= 768;
+    
+    // On mobile, set visible immediately to ensure header is shown
+    if (isMobile) {
+      setIsVisible(true);
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: isMobile ? 0.1 : 0.2, rootMargin: '50px' }
     );
 
     if (sectionRef.current) {
@@ -36,7 +43,51 @@ const Solutions = () => {
     features: ['Biometric Recognition', 'RFID Technology', 'Real-time Logs', 'Scalable Architecture'],
     gradient: 'linear-gradient(135deg, #6b7280 0%, #4b5563 100%)'
   },
-  */
+  */{
+  id: 'webdev',
+  title: 'Full Stack Development',
+  subtitle: 'Web & App Solutions',
+  description: 'End-to-end web and Flutter app development services — from responsive frontends to robust backend systems, tailored for scalable business and automation needs.',
+  image: '/lovable-uploads/web_dev_code-3385504.jpg',
+  logo: '/lovable-uploads/png-clipart-web-development-logo.png',
+  features: ['Modern UI/UX Design', 'Backend APIs', 'Database Integration', 'Cloud Deployment'],
+  gradient: 'linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%)',
+  link: 'mailto:info@petaera.com?subject=Inquiry about Full Stack Development Services&body=I would like to know more about your Full Stack Development (Web & App Solutions) services. Please provide me with more information.'
+   },
+   {
+    id: 'pcbdesign',
+    title: 'PCB Design & Prototyping',
+    subtitle: 'Electronics Hardware Solutions',
+    description: 'Professional PCB design and prototyping services — from schematic development to multi-layer board fabrication, optimized for performance, manufacturability, and reliability.',
+    image: '/lovable-uploads/PCB_image.jpg', // 👈 Replace with your actual image path
+    logo: '/lovable-uploads/MPNC3D.jpg',   // 👈 Replace with your logo path
+    features: ['Schematic Design', 'Multi-layer PCB Layout', 'Fabrication Support', 'Assembly & Testing'],
+    gradient: 'linear-gradient(135deg, #059669 0%, #065f46 100%)',
+    link: 'mailto:info@petaera.com?subject=Inquiry about PCB Design and Prototyping Services&body=I would like to know more about your PCB Design & Prototyping services. Please provide me with more information about your design process, fabrication options, and pricing.' 
+  },
+  {
+    id: 'iot',
+    title: 'IoT & Embedded Solutions',
+    subtitle: 'Smart Hardware Development',
+    description: 'Custom IoT and embedded system solutions — from PCB design and firmware development to fully integrated smart devices for automation, access control, and industrial monitoring.',
+    image: '/lovable-uploads/arduino-1080213.jpg', // 👈 Replace with your actual image path
+    logo: '/lovable-uploads/es_logo.png',   // 👈 Replace with your logo path
+    features: ['Custom PCB & Firmware', 'Wireless Connectivity', 'Sensor Integration', 'Edge Device Prototyping'],
+    gradient: 'linear-gradient(135deg, #f59e0b 0%, #b45309 100%)',
+    link: 'mailto:info@petaera.com?subject=Inquiry about IoT and Embedded Solutions&body=I would like to know more about your IoT and Embedded Solutions. Please provide me with more details about your hardware capabilities, firmware development, and custom project support.' // 👈 Optional: replace with actual or upcoming IoT solutions page
+  },
+  {
+    id: 'petalog',
+    title: 'PetaLog',
+    subtitle: 'Vehicle Log & Management',
+    description: 'Comprehensive vehicle tracking and management system for car washes, fuel pumps, and industrial facilities.',
+    image: '/lovable-uploads/68c9334a-a8ab-4c68-85a8-f2571c49a70c.png',
+    logo: '/lovable-uploads/7a985817-5d2e-4406-8ea7-20c759f8c13d.png',
+    features: ['Vehicle Tracking', 'Service Management', 'Multi-branch Dashboard', 'Analytics & Reports'],
+    gradient: 'linear-gradient(135deg, #374151 0%, #1f2937 100%)',
+    link: 'https://petalog.in'
+  },
+
     {
       id: 'petaparking',
       title: 'PetaParking',
@@ -48,17 +99,7 @@ const Solutions = () => {
       gradient: 'linear-gradient(135deg, #6b7280 0%, #374151 100%)',
       link: 'https://petaparking.petaera.com' // 👈 Added link
     },
-    {
-      id: 'petalog',
-      title: 'PetaLog',
-      subtitle: 'Vehicle Log & Management',
-      description: 'Comprehensive vehicle tracking and management system for car washes, fuel pumps, and industrial facilities.',
-      image: '/lovable-uploads/68c9334a-a8ab-4c68-85a8-f2571c49a70c.png',
-      logo: '/lovable-uploads/7a985817-5d2e-4406-8ea7-20c759f8c13d.png',
-      features: ['Vehicle Tracking', 'Service Management', 'Multi-branch Dashboard', 'Analytics & Reports'],
-      gradient: 'linear-gradient(135deg, #374151 0%, #1f2937 100%)',
-      link: 'https://log.petaera.com'
-    },
+    
     {
       id: 'techfusion',
       title: 'Tech Fusion',
@@ -132,12 +173,19 @@ const Solutions = () => {
                   ))}
                 </div>
 
-                <Link to={solution.link} className="card-button">
-  Learn More
-  <svg className="button-icon" viewBox="0 0 20 20" fill="currentColor">
-    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-  </svg>
-</Link>
+                <a 
+                  href={solution.link} 
+                  className="card-button"
+                  {...(solution.link.startsWith('http') ? {
+                    target: "_blank",
+                    rel: "noopener noreferrer"
+                  } : {})}
+                >
+                  Learn More
+                  <svg className="button-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </a>
               </div>
 
               <div 

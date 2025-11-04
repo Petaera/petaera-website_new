@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className="navbar-container">
           <div className="navbar-brand">
             <img src="/lovable-uploads/f4be8577-e4bc-4c92-bc12-cc9a8adc8e7c.png" alt="PetaEra Technologies" className="navbar-logo" />
-            <span className="navbar-title">PetaEra Technologies</span>
+            <span className="navbar-title">PETAERA TECHNOLOGIES </span>
           </div>
 
           <div className={`navbar-menu ${isMobileMenuOpen ? 'navbar-menu-open' : ''}`}>

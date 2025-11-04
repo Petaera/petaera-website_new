@@ -65,7 +65,7 @@ const Contact = () => {
     {
       icon: '📍',
       title: 'Location',
-      value: 'SY NO 232/6 THEKKUMURI,KARALMANNA,OTTAPPALAM,Palakkad-679506, Kerala, India',
+      value: 'SY NO 232/6 THEKKUMURI,KARALMANNA,Palakkad 679506, Kerala, India',
       link: '#'
     },
     {
@@ -91,7 +91,7 @@ const Contact = () => {
           <div className={`contact-info ${isVisible ? 'animate-fade-left' : ''}`}>
             <h3 className="contact-info-title">Let's Start a Conversation</h3>
             <p className="contact-info-description">
-              Whether you're looking for IoT solutions, AI automation, or educational programs, 
+              Whether you're looking for IoT solutions,Web solutions, AI automation, or educational programs, 
               our team is here to help you navigate the digital transformation journey.
             </p>
 
@@ -130,7 +130,7 @@ const Contact = () => {
             </div> 
           </div>
 
-          <div className={`contact-form-container ${isVisible ? 'animate-fade-right' : ''}`}>
+          {/* <div className={`contact-form-container ${isVisible ? 'animate-fade-right' : ''}`}>
             <form onSubmit={handleSubmit} className="contact-form">
               <h3 className="form-title">Send us a Message</h3>
               
@@ -198,7 +198,7 @@ const Contact = () => {
                 </svg>
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

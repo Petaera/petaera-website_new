@@ -37,7 +37,7 @@ const Footer = () => {
                 alt="PetaEra Technologies" 
                 className="footer-logo"
               />
-              <h3 className="footer-brand-title">PetaEra Technologies LLP</h3>
+              <h3 className="footer-brand-title">PETAERA TECHNOLOGIES LLP</h3>
             </div>
             <p className="footer-description">
               Innovating Education, Automation, and Intelligence through cutting-edge IoT solutions, 
@@ -131,7 +131,7 @@ const Footer = () => {
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
-                <a href="mailto:petaerallp@gmail.com" className="contact-link">
+                <a href="mailto:info@petaera.com" className="contact-link">
                   info@petaera.com
                 </a>
               </div>
@@ -156,7 +156,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p className="footer-copyright">
-              © {currentYear} PetaEra Technologies LLP. All rights reserved.
+              © {currentYear} PETAERA TECHNOLOGIES LLP. All rights reserved.
             </p>
             {/* <div className="footer-legal">
               <button className="legal-link">Privacy Policy</button>

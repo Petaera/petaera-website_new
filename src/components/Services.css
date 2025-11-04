@@ -138,19 +138,6 @@
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: var(--space-10);
-  position: relative;
-}
-
-.why-title::after {
-  content: '';
-  position: absolute;
-  bottom: -var(--space-3);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: var(--gradient-tech);
-  border-radius: var(--radius-sm);
 }
 
 .why-grid {
@@ -167,29 +154,11 @@
   transition: all var(--transition-normal);
   opacity: 0;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.why-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--gradient-tech);
-  transform: scaleX(0);
-  transition: transform var(--transition-normal);
 }
 
 .why-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
-}
-
-.why-card:hover::before {
-  transform: scaleX(1);
 }
 
 .why-icon {
@@ -409,5 +378,180 @@
   .why-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-4);
+  }
+}
+
+/* Clients Section */
+.clients-section {
+  margin-top: var(--space-20);
+  text-align: center;
+  opacity: 0;
+}
+
+.clients-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--space-10);
+}
+
+.clients-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-8);
+  align-items: center;
+  justify-items: center;
+  padding: var(--space-4) 0;
+}
+
+.client-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  width: 100%;
+  max-width: 200px;
+  height: 120px;
+}
+
+/* Hide duplicate items on desktop */
+.client-item-duplicate {
+  display: none;
+}
+
+.client-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.client-logo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all var(--transition-normal);
+}
+
+.client-item:hover .client-logo {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Mobile - Horizontal Scroll with Auto-scroll Animation */
+@media (max-width: 768px) {
+  .clients-section {
+    margin-top: var(--space-16);
+  }
+
+  .clients-title {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-6);
+  }
+
+  .clients-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: var(--space-2);
+  }
+
+  .clients-container::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .clients-container::-webkit-scrollbar-track {
+    background: var(--background-secondary);
+    border-radius: var(--radius-md);
+  }
+
+  .clients-container::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: var(--radius-md);
+  }
+
+  .clients-grid {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-6);
+    padding: var(--space-4) var(--space-4);
+    animation: scroll-clients 25s linear infinite;
+    width: max-content;
+    will-change: transform;
+  }
+
+  /* Pause animation on hover */
+  .clients-container:hover .clients-grid {
+    animation-play-state: paused;
+  }
+
+  .client-item {
+    flex-shrink: 0;
+    width: 150px;
+    height: 100px;
+    max-width: 150px;
+  }
+
+  /* Show duplicate items on mobile for infinite scroll */
+  .client-item-duplicate {
+    display: flex;
+  }
+
+  .client-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+}
+
+/* Auto-scroll animation for mobile - moves 50% to show duplicates */
+@keyframes scroll-clients {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .clients-grid {
+    animation: none;
+  }
+  
+  .clients-container {
+    overflow-x: auto;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .clients-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-4);
+  }
+
+  .client-item {
+    width: 120px;
+    height: 80px;
+    max-width: 120px;
+    padding: var(--space-3);
+  }
+
+  .clients-grid {
+    gap: var(--space-4);
+    padding: var(--space-3) var(--space-3);
   }
 }

@@ -25,28 +25,29 @@ const Services = () => {
   const services = [
     {
       id: 'iot',
-      title: 'IoT Hardware Innovation',
-      description: 'Custom IoT devices including fingerprint-based attendance systems, access control devices, and smart sensors for various applications.',
+      title: 'IoT & Embedded Solutions',
+      description: 'End-to-end IoT and embedded system development tailored to any need — from custom PCB design to full-fledged smart devices such as fingerprint attendance systems, access control units, automation modules, and intelligent sensors.',
       image: '/lovable-uploads/036d3317-76f7-4dd7-919d-1a324fd44be2.png',
       icon: '🔧',
       features: [
-        'Custom PCB Design',
-        'Embedded Systems',
-        'Sensor Integration',
-        'Wireless Communication'
+        'Custom PCB Design & Prototyping',
+        'Embedded System Development',
+        'IoT Product Engineering',
+        'Sensor & Wireless Integration'
       ]
     },
     {
       id: 'ai',
-      title: 'AI + Automation Systems',
-      description: 'Automatic Number Plate Recognition (ANPR) - AI-driven number plate detection and logging used in PetaLog and PetaParking for car washes, fuel stations, and gated facilities.',
+      title: 'AI, Automation & Web Systems',
+      description: 'We provide web development services and build AI-driven platforms like PetaLog and PetaParking — delivering intelligent automation, ANPR (Automatic Number Plate Recognition), and smart analytics for car washes, fuel stations, and gated facilities.',
       image: '/lovable-uploads/c811e893-2ab8-4cb3-b82b-e3d471803e73.png',
       icon: '🤖',
       features: [
-        'Machine Learning Models',
-        'Computer Vision',
+        'Full-Stack Web & Flutter App Development',
+        'Machine Learning & Computer Vision',
         'Predictive Analytics',
-        'Process Automation'
+        'Process Automation',
+        
       ]
     },
     {
@@ -161,6 +162,45 @@ const Services = () => {
                 <p className="why-card-description">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div className={`clients-section ${isVisible ? 'animate-fade-up' : ''}`}>
+          <h3 className="clients-title">Our Clients</h3>
+          <div className="clients-container">
+            <div className="clients-grid">
+              <div className="client-item">
+                <img src="/lovable-uploads/clients/ARIES.jpg" alt="ARIES" className="client-logo" />
+              </div>
+              <div className="client-item">
+                <img src="/lovable-uploads/clients/bubbles.jpeg" alt="Bubbles" className="client-logo" />
+              </div>
+              <div className="client-item">
+                <img src="/lovable-uploads/clients/buggy.jpeg" alt="Buggy" className="client-logo" />
+              </div>
+              <div className="client-item">
+                <img src="/lovable-uploads/clients/CFTECH.png" alt="CFTECH" className="client-logo" />
+              </div>
+              <div className="client-item">
+                <img src="/lovable-uploads/clients/spix.png" alt="Spix" className="client-logo" />
+              </div>
+              {/* Duplicate for seamless infinite scroll on mobile */}
+              <div className="client-item client-item-duplicate">
+                <img src="/lovable-uploads/clients/ARIES.jpg" alt="ARIES" className="client-logo" />
+              </div>
+              <div className="client-item client-item-duplicate">
+                <img src="/lovable-uploads/clients/bubbles.jpeg" alt="Bubbles" className="client-logo" />
+              </div>
+              <div className="client-item client-item-duplicate">
+                <img src="/lovable-uploads/clients/buggy.jpeg" alt="Buggy" className="client-logo" />
+              </div>
+              <div className="client-item client-item-duplicate">
+                <img src="/lovable-uploads/clients/CFTECH.png" alt="CFTECH" className="client-logo" />
+              </div>
+              <div className="client-item client-item-duplicate">
+                <img src="/lovable-uploads/clients/spix.png" alt="Spix" className="client-logo" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

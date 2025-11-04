@@ -53,8 +53,11 @@ const Hero = () => {
 
       <div className="hero-content">
         <div className={`hero-text ${isVisible ? 'animate-fade-up' : ''}`}>
+          <div className="hero-logo-mobile">
+            <img src="/lovable-uploads/f4be8577-e4bc-4c92-bc12-cc9a8adc8e7c.png" alt="PetaEra Technologies" className="hero-logo-image" />
+          </div>
           <h1 className="hero-title">
-            <span className="hero-title-main">PetaEra Technologies</span>
+            <span className="hero-title-main">PETAERA TECHNOLOGIES </span>
            {/* <span className="hero-title-sub">LLP</span>*/}
           </h1>
           <p className="hero-subtitle">

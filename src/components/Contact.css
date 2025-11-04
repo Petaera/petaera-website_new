@@ -27,13 +27,25 @@
 
 .contact-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: var(--space-16);
   align-items: start;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* When form is visible, use 2-column layout */
+.contact-content:has(.contact-form-container) {
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  justify-items: stretch;
 }
 
 .contact-info {
   opacity: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .contact-info-title {
@@ -41,6 +53,7 @@
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: var(--space-4);
+  text-align: center;
 }
 
 .contact-info-description {
@@ -48,6 +61,7 @@
   line-height: 1.8;
   color: var(--text-secondary);
   margin-bottom: var(--space-8);
+  text-align: center;
 }
 
 .contact-info-grid {
@@ -59,6 +73,7 @@
 .contact-info-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-4);
   padding: var(--space-4);
   background: white;
@@ -67,10 +82,12 @@
   transition: all var(--transition-normal);
   text-decoration: none;
   color: inherit;
+  width: 100%;
+  text-align: center;
 }
 
 .contact-info-item:hover {
-  transform: translateX(8px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   background: var(--background-secondary);
 }
@@ -87,24 +104,28 @@
   flex-shrink: 0;
 }
 
+.contact-details {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .contact-details h4 {
   font-size: var(--font-size-base);
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: var(--space-1);
+  text-align: center;
 }
 
 .contact-details p {
   font-size: var(--font-size-base);
   color: var(--text-secondary);
   margin-bottom: 0;
+  text-align: center;
 }
 
-/* Prevent long text overflow in contact details on small screens */
-.contact-details {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
 .contact-value {
   overflow-wrap: anywhere;
   word-break: break-word;
@@ -382,7 +403,8 @@
 
   .contact-info-item {
     flex-direction: row;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
     gap: var(--space-4);
     padding: var(--space-4);
   }

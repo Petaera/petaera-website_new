@@ -11,9 +11,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e5e7eb" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e5e7eb" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  background-repeat: repeat;
+  background-size: 20px 20px;
   opacity: 0.3;
   z-index: 1;
+  pointer-events: none; /* Ensure it doesn't interfere with interactions */
 }
 
 .about .container {
@@ -24,18 +27,6 @@
 .section-title {
   color: var(--primary-color);
   margin-bottom: var(--space-6);
-  position: relative;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -var(--space-2);
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: var(--gradient-tech);
-  border-radius: var(--radius-sm);
 }
 
 .about-content {
@@ -211,6 +202,18 @@
 
 /* Responsive Design */
 @media (max-width: 360px) {
+  .about {
+    background: var(--background-secondary); /* Ensure light background on mobile */
+  }
+  
+  .about::before {
+    display: block; /* Ensure checkered pattern is visible on mobile */
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e5e7eb" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    background-repeat: repeat;
+    background-size: 20px 20px;
+    opacity: 0.4; /* Slightly more visible on mobile */
+  }
+  
   .about-content {
     grid-template-columns: 1fr;
     gap: var(--space-6);
@@ -280,6 +283,18 @@
 }
 
 @media (min-width: 361px) and (max-width: 480px) {
+  .about {
+    background: var(--background-secondary); /* Ensure light background on mobile */
+  }
+  
+  .about::before {
+    display: block; /* Ensure checkered pattern is visible on mobile */
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e5e7eb" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    background-repeat: repeat;
+    background-size: 20px 20px;
+    opacity: 0.4; /* Slightly more visible on mobile */
+  }
+  
   .about-content {
     grid-template-columns: 1fr;
     gap: var(--space-6);
@@ -322,6 +337,18 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+  .about {
+    background: var(--background-secondary); /* Ensure light background on mobile */
+  }
+  
+  .about::before {
+    display: block; /* Ensure checkered pattern is visible on mobile */
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e5e7eb" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    background-repeat: repeat;
+    background-size: 20px 20px;
+    opacity: 0.4; /* Slightly more visible on mobile */
+  }
+  
   .about-content {
     grid-template-columns: 1fr;
     gap: var(--space-8);
