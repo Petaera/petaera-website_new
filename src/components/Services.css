@@ -428,6 +428,16 @@
   display: none;
 }
 
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
 .client-item:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);

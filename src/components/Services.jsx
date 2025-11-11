@@ -170,35 +170,57 @@ const Services = () => {
           <div className="clients-container">
             <div className="clients-grid">
               <div className="client-item">
-                <img src="/lovable-uploads/clients/ARIES.jpg" alt="ARIES" className="client-logo" />
+                <a href="https://www.aimri.in/" target="_blank" rel="noopener noreferrer" className="client-link">
+                  <img src="/lovable-uploads/clients/AIMRI_LOGO.png" alt="AIMRI" className="client-logo" />
+                </a>
               </div>
               <div className="client-item">
-                <img src="/lovable-uploads/clients/bubbles.jpeg" alt="Bubbles" className="client-logo" />
+                <img src="/lovable-uploads/clients/ARIES ENERGY _Logo.png" alt="ARIES Energy" className="client-logo" />
+              </div>
+              <div className="client-item">
+                <a href="https://bubbleskochi.com" target="_blank" rel="noopener noreferrer" className="client-link">
+                  <img src="/lovable-uploads/clients/bubbles.jpeg" alt="Bubbles" className="client-logo" />
+                </a>
               </div>
               <div className="client-item">
                 <img src="/lovable-uploads/clients/buggy.jpeg" alt="Buggy" className="client-logo" />
               </div>
               <div className="client-item">
-                <img src="/lovable-uploads/clients/CFTECH.png" alt="CFTECH" className="client-logo" />
+                <a href="https://cftech.in" target="_blank" rel="noopener noreferrer" className="client-link">
+                  <img src="/lovable-uploads/clients/CFTECH.png" alt="CFTECH" className="client-logo" />
+                </a>
               </div>
               <div className="client-item">
-                <img src="/lovable-uploads/clients/spix.png" alt="Spix" className="client-logo" />
+                <a href="https://spixinnov.com" target="_blank" rel="noopener noreferrer" className="client-link">
+                  <img src="/lovable-uploads/clients/spix.png" alt="Spix" className="client-logo" />
+                </a>
               </div>
               {/* Duplicate for seamless infinite scroll on mobile */}
               <div className="client-item client-item-duplicate">
-                <img src="/lovable-uploads/clients/ARIES.jpg" alt="ARIES" className="client-logo" />
+                <a href="https://www.aimri.in/" target="_blank" rel="noopener noreferrer" className="client-link">
+                  <img src="/lovable-uploads/clients/AIMRI_LOGO.png" alt="AIMRI" className="client-logo" />
+                </a>
               </div>
               <div className="client-item client-item-duplicate">
-                <img src="/lovable-uploads/clients/bubbles.jpeg" alt="Bubbles" className="client-logo" />
+                <img src="/lovable-uploads/clients/ARIES ENERGY _Logo.png" alt="ARIES Energy" className="client-logo" />
+              </div>
+              <div className="client-item client-item-duplicate">
+                <a href="https://bubbleskochi.com" target="_blank" rel="noopener noreferrer" className="client-link">
+                  <img src="/lovable-uploads/clients/bubbles.jpeg" alt="Bubbles" className="client-logo" />
+                </a>
               </div>
               <div className="client-item client-item-duplicate">
                 <img src="/lovable-uploads/clients/buggy.jpeg" alt="Buggy" className="client-logo" />
               </div>
               <div className="client-item client-item-duplicate">
-                <img src="/lovable-uploads/clients/CFTECH.png" alt="CFTECH" className="client-logo" />
+                <a href="https://cftech.in" target="_blank" rel="noopener noreferrer" className="client-link">
+                  <img src="/lovable-uploads/clients/CFTECH.png" alt="CFTECH" className="client-logo" />
+                </a>
               </div>
               <div className="client-item client-item-duplicate">
-                <img src="/lovable-uploads/clients/spix.png" alt="Spix" className="client-logo" />
+                <a href="https://spixinnov.com" target="_blank" rel="noopener noreferrer" className="client-link">
+                  <img src="/lovable-uploads/clients/spix.png" alt="Spix" className="client-logo" />
+                </a>
               </div>
             </div>
           </div>

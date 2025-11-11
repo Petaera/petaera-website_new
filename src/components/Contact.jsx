@@ -68,12 +68,12 @@ const Contact = () => {
       value: 'SY NO 232/6 THEKKUMURI,KARALMANNA,Palakkad 679506, Kerala, India',
       link: '#'
     },
-    {
-      icon: '🌐',
-      title: 'Website',
-      value: 'www.petaera.com',
-      link: 'https://www.petaera.com'
-    }
+    // {
+    //   icon: '🌐',
+    //   title: 'Website',
+    //   value: 'www.petaera.com',
+    //   link: 'https://www.petaera.com'
+    // }
   ];
 
   return (
