@@ -66,6 +66,17 @@ const Solutions = () => {
     link: 'mailto:info@petaera.com?subject=Inquiry about PCB Design and Prototyping Services&body=I would like to know more about your PCB Design & Prototyping services. Please provide me with more information about your design process, fabrication options, and pricing.' 
   },
   {
+    id: 'pracmind',
+    title: 'PracMind',
+    subtitle: 'Psychologist Dashboard',
+    description: 'Comprehensive dashboard solution for psychologists to manage patients, schedule sessions, maintain notes, and track progress with ease.',
+    image: '/lovable-uploads/hero-therapy.png',
+    logo: '/lovable-uploads/ai-generated-8739380.png',
+    features: ['Patient Management', 'Session Scheduling', 'Notes & Documentation', 'Analytics & Reports'],
+    gradient: 'linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)',
+    link: 'https://pracmind.in'
+  },
+  {
     id: 'iot',
     title: 'IoT & Embedded Solutions',
     subtitle: 'Smart Hardware Development',
