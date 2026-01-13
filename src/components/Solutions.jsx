@@ -71,7 +71,7 @@ const Solutions = () => {
     subtitle: 'Psychologist Dashboard',
     description: 'Comprehensive dashboard solution for psychologists to manage patients, schedule sessions, maintain notes, and track progress with ease.',
     image: '/lovable-uploads/hero-therapy.png',
-    logo: '/lovable-uploads/ai-generated-8739380.png',
+    logo: '/lovable-uploads/pracmind.png',
     features: ['Patient Management', 'Session Scheduling', 'Notes & Documentation', 'Analytics & Reports'],
     gradient: 'linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)',
     link: 'https://pracmind.in'
